@@ -1,6 +1,6 @@
 package com.coffeeshop.service;
 
-import com.coffeeshop.Exception.ShopNotFoundException;
+import com.coffeeshop.exception.ShopNotFoundException;
 
 import com.coffeeshop.model.Shop;
 import com.coffeeshop.repository.ShopRepository;

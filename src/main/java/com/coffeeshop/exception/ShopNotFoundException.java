@@ -1,4 +1,4 @@
-package com.coffeeshop.Exception;
+package com.coffeeshop.exception;
 
 public class ShopNotFoundException extends RuntimeException {
     public ShopNotFoundException(String message) {
