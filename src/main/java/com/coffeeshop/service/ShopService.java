@@ -44,5 +44,18 @@ public class ShopService {
             logger.info("Saving shop: {}", shop.getName());
             return shopRepository.save(shop);
         }
+
+    public Shop updateShop(Long id, Shop updatedShop) {
+        return shopRepository.findById(id).map(shop -> {
+            shop.setName(updatedShop.getName());
+            shop.setLocation(updatedShop.getLocation());
+            logger.info("Updating shop details for ID: {}", id);
+            return shopRepository.save(shop);
+        }).orElseThrow(() -> {
+            logger.error("Shop with ID {} not found for update", id);
+            return new ShopNotFoundException("Shop not found with ID: " + id);
+        });
     }
+
+}
 

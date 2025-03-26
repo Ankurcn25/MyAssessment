@@ -47,9 +47,10 @@ public class ShopController {
         return ResponseEntity.ok(createdShop);
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleException(Exception e) {
-        logger.error("Exception occurred: {}", e.getMessage(), e);
-        return ResponseEntity.status(500).body("An unexpected error occurred.");
+    @PutMapping("/shop/update/{id}")
+    public ResponseEntity<Shop> updateShop(@PathVariable Long id, @RequestBody Shop updatedShop) {
+        logger.info("Updating shop with ID: {}", id);
+        Shop shop = shopService.updateShop(id, updatedShop);
+        return ResponseEntity.ok(shop);
     }
 }
