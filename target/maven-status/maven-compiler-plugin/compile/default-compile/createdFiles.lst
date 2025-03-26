@@ -1,6 +1,12 @@
-com\coffeeshop\config\SecurityConfig.class
-com\coffeeshop\controller\ShopController.class
+com\coffeeshop\CoffeeShopApplication.class
 com\coffeeshop\service\ShopService.class
 com\coffeeshop\model\Shop.class
+com\coffeeshop\Exception\GlobalExceptionHandler.class
+com\coffeeshop\service\OrderService.class
 com\coffeeshop\repository\ShopRepository.class
-com\coffeeshop\Application.class
+com\coffeeshop\Exception\ShopNotFoundException.class
+com\coffeeshop\config\SecurityConfig.class
+com\coffeeshop\controller\ShopController.class
+com\coffeeshop\repository\OrderRepository.class
+com\coffeeshop\controller\OrderController.class
+com\coffeeshop\model\Order.class
